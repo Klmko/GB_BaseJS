@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Homework</title>
 </head>
+
 <body>
-<!--
+  <!--
 Обязательное задание.
 
 Необходимо реализовать четыре функции, каждая функция должна принимать по два
@@ -28,10 +30,40 @@
 
 Необходимо для всех функций прописать комментарии jsdoc https://jsdoc.app/.
 -->
-<script>
-  "use strict";
+  <script>
+    "use strict";
 
-  // Здесь пишем решение, данный комментарий необходимо стереть.
-</script>
+    /**
+      * Adds two numbers.
+      * @param {number} num1 - The first number.
+      * @param {number} num2 - The second number.
+      */
+    const add = (num1, num2) => num1 + num2;
+
+    /**
+      * Subtracts the lesser number from the greater one.
+      * @param {number} num1 - The first number.
+      * @param {number} num2 - The second number.
+      */
+    const sub = (num1, num2) => Math.abs(num1 - num2);
+
+    /**
+      * Multiplies two numbers.
+      * @param {number} num1 - The first number.
+      * @param {number} num2 - The second number.
+      */
+    const mul = (num1, num2) => num1 * num2;
+
+    /**
+      * Divides the first number by the second one.
+      * @param {number} num1 - The first number.
+      * @param {number} num2 - The second number.
+      */
+    const div = (num1, num2) => num1 / num2;
+
+
+
+  </script>
 </body>
+
 </html>
