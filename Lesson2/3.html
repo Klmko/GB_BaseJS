@@ -22,14 +22,15 @@
 -->
   <script>
     "use strict";
-    let а = prompt('Введите число для переменной a');
-    let b = prompt('Введите число для переменной b');
-    if (a > 0 && b > 0) {
+    let a = +prompt('Введите число для переменной a');
+    let b = +prompt('Введите число для переменной b');
+    if (a >= 0 && b >= 0) {
       alert(a - b);
     } else if (a < 0 && b < 0) {
       alert(a * b);
     } else if (a * b < 0) {
-      alert(a + b);
+      alert(a + b)
+}
   </script>
 </body>
 
