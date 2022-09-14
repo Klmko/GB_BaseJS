@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Homework</title>
 </head>
+
 <body>
-<!--
+  <!--
 Обязательное задание.
 
 Необходимо попросить пользователя ввести два числа в переменные `a` и `b`.
@@ -18,10 +20,17 @@
 `a` и `b`.
 В остальных случаях программа не должна ничего выводить.
 -->
-<script>
-  "use strict";
-
-  // Здесь пишем решение, данный комментарий необходимо стереть.
-</script>
+  <script>
+    "use strict";
+    let а = prompt('Введите число для переменной a');
+    let b = prompt('Введите число для переменной b');
+    if (a > 0 && b > 0) {
+      alert(a - b);
+    } else if (a < 0 && b < 0) {
+      alert(a * b);
+    } else if (a * b < 0) {
+      alert(a + b);
+  </script>
 </body>
+
 </html>
