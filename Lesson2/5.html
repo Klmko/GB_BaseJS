@@ -34,6 +34,11 @@ Infinity делать не нужно, однако, в случае если б
   <script>
     "use strict";
 
+    const add = (num1, num2) => num1 + num2;
+    const sub = (num1, num2) => Math.abs(num1 - num2);
+    const mul = (num1, num2) => num1 * num2;
+    const div = (num1, num2) => num1 / num2;
+
     /**
     * Math operations with two numbers.
     * @param {number} arg1 - The first number.
@@ -41,10 +46,6 @@ Infinity делать не нужно, однако, в случае если б
     * @param {string} operation - Math operation sign.
     */
     function mathOperation(arg1, arg2, operation) {
-      const add = (num1, num2) => num1 + num2;
-      const sub = (num1, num2) => Math.abs(num1 - num2);
-      const mul = (num1, num2) => num1 * num2;
-      const div = (num1, num2) => num1 / num2;
       const operators = {
         "+": add,
         "-": sub,
