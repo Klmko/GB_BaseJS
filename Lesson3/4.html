@@ -46,6 +46,10 @@
       },
     ];
 
+    console.log(products.filter(item => item.photos?.length > 0));
+
+    products.sort((prod1, prod2) => prod1.price - prod2.price);
+    console.log(products)
 
   </script>
 </body>
