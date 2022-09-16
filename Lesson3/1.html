@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Homework</title>
 </head>
+
 <body>
-<!--
+  <!--
 Обязательное задание.
 
 Необходимо с помощью цикла for вывести следующие 11 строк в консоль:
@@ -16,10 +18,14 @@
 …
 10 – четное число
 -->
-<script>
-  "use strict";
+  <script>
+    "use strict";
 
-  // Здесь пишем решение, данный комментарий необходимо стереть.
-</script>
+    for (let i = 0; i < 11; i++) {
+      const arr = ['– это ноль', '– четное число', '– нечетное число'];
+      console.log(!i ? `${i} ${arr[i]}` : `${i} ${arr[i % 2 + 1]}`)
+    }
+  </script>
 </body>
+
 </html>
