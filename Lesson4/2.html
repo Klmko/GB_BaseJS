@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Homework</title>
 </head>
+
 <body>
-<!--
+  <!--
 Обязательное задание.
 
 Необходимо данное задание выполнить в es5 стиле и в es6 стиле.
@@ -19,6 +21,8 @@
 экземпляра объекта.
 Каждому экземпляру объекта должен быть доступен метод `edit`, который будет
 менять текст поста.
+
+
 
 ---
 
@@ -47,10 +51,37 @@
 что-нибудь пропустить.
 4. Если непонятно условие - задайте вопрос.
 -->
-<script>
-  "use strict";
+  <script>
+    "use strict";
 
-  // Здесь пишем решение, данный комментарий необходимо стереть.
-</script>
+    class PostES6 {
+      constructor(author, text) {
+        this.author = author;
+        this.edit(text);
+      }
+
+      edit(text) {
+        this.text = text;
+        this.date = new Date();
+      }
+    }
+
+    class AttachedPostES6 extends PostES6 {
+      constructor(...args) {
+        super(...args);
+        this.highlighted = false;
+      }
+      makeTextHighlighted() {
+        this.highlighted = true;
+      }
+    }
+
+    const test = new AttachedPostES6('Вася', 'Привет');
+    console.log(test);
+
+
+  </script>
+
 </body>
+
 </html>
