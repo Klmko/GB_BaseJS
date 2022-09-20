@@ -54,6 +54,41 @@
   <script>
     "use strict";
 
+    // Стиль es5
+    const PostES5 = function (author, text) {
+      this.author = author;
+      this.edit(text);
+    }
+
+    PostES5.prototype.edit = function (text) {
+      this.text = text;
+      this.date = new Date();
+    }
+
+    const AttachedPostES5 = function (...args) {
+      PostES5.call(this, ...args);
+      this.highlighted = false;
+    }
+
+    AttachedPostES5.prototype = Object.create(PostES5.prototype);
+    AttachedPostES5.prototype.constructor = AttachedPostES5;
+    AttachedPostES5.prototype.makeTextHighlighted = function () {
+      this.highlighted = true;
+      this.date = new Date();
+    };
+
+
+    const ekzPostES5 = new PostES5('Вася', 'Привет');
+    console.log(ekzPostES5);
+    ekzPostES5.edit('Новый текст для Васи');
+    console.log(ekzPostES5);
+
+    const ekzAttachedPostES5 = new AttachedPostES5('Петя', 'Текст для Пети');
+    console.log(ekzAttachedPostES5);
+    ekzAttachedPostES5.makeTextHighlighted();
+    console.log(ekzAttachedPostES5);
+
+    // Стиль es6
     class PostES6 {
       constructor(author, text) {
         this.author = author;
@@ -73,11 +108,19 @@
       }
       makeTextHighlighted() {
         this.highlighted = true;
+        this.date = new Date();
       }
     }
 
-    const test = new AttachedPostES6('Вася', 'Привет');
-    console.log(test);
+    const ekzPostES6 = new PostES6('Маша', 'Пока');
+    console.log(ekzPostES6);
+    ekzPostES6.edit('Новый текст для Маши');
+    console.log(ekzPostES6);
+
+    const ekzAttachedPostES6 = new AttachedPostES6('Вера', 'Текст для Веры');
+    console.log(ekzAttachedPostES6);
+    ekzAttachedPostES6.makeTextHighlighted();
+    console.log(ekzAttachedPostES6);
 
 
   </script>
